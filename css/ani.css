@@ -1,0 +1,48 @@
+#welcome .left.is-visible {
+  transform: translate(0, 0);
+  opacity: 0;
+  animation: welcome-photo 0.5s 0.5s forwards;
+}
+
+@keyframes welcome-photo {
+  0% {
+    transform: translate(0, 0px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, -200px);
+    opacity: 1;
+  }
+}
+
+#skills .show-on-scroll.is-visible {
+  opacity: 0;
+  transform: translate(0, 0);
+  animation: skill-icons 0.5s 0.5s forwards;
+}
+@keyframes skill-icons {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 150px);
+    opacity: 1;
+  }
+}
+
+#about .show-on-scroll.is-visible {
+  opacity: 0;
+  transform: translate(0, 0);
+  animation: about-img 0.5s 0.5s forwards;
+}
+@keyframes about-img {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, -150px);
+    opacity: 1;
+  }
+}
