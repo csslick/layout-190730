@@ -1,7 +1,7 @@
 #welcome .left.is-visible {
   transform: translate(0, 0);
   opacity: 0;
-  animation: welcome-photo 0.5s 0.5s forwards;
+  animation: welcome-photo 1s 0.5s forwards;
 }
 
 @keyframes welcome-photo {
@@ -18,15 +18,15 @@
 #skills .show-on-scroll.is-visible {
   opacity: 0;
   transform: translate(0, 0);
-  animation: skill-icons 0.5s 0.5s forwards;
+  animation: skill-icons 2s 0.5s forwards;
 }
 @keyframes skill-icons {
   0% {
-    transform: translate(0, 0);
+    transform: translate(40px, 0);
     opacity: 0;
   }
   100% {
-    transform: translate(0, 150px);
+    transform: translate(0, 0);
     opacity: 1;
   }
 }
@@ -34,7 +34,7 @@
 #about .show-on-scroll.is-visible {
   opacity: 0;
   transform: translate(0, 0);
-  animation: about-img 0.5s 0.5s forwards;
+  animation: about-img 1s 0.5s forwards;
 }
 @keyframes about-img {
   0% {

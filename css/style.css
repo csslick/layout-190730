@@ -18,6 +18,7 @@ a {
 p {
   font-weight: lighter;
   margin: 0.8em 0;
+  line-height: 1.8;
 }
 h1 {
   font-size: 38px;
@@ -41,12 +42,12 @@ h3 {
 .cta:hover {
   opacity: 0.8;
 }
-
+.col{ flex: 1;}
 .container {
   max-width: 1200px;
   min-width: 768px;
   margin: 0 auto;
-/*   border: 1px solid red; */
+  /* border: 1px solid red; */
 }
 
 #main-header {
@@ -96,32 +97,17 @@ h3 {
 
 #welcome {
   position: relative;
-/*   border: 2px solid green; */
+  /* border: 2px solid green; */
   /* height: 500px; */
 }
 #welcome .container {
   display: flex;
 }
-#welcome .container > div {
-  flex: 1;
-  padding: 20px;
-}
+#welcome .left{ margin-right: 30px;}
 #welcome .left,
 #about .col:last-child {
-  /* transform: translate(0, -240px); */
   position: relative;
   opacity: 0;
-}
-#welcome .left:before,
-#about .col:last-child:beofre {
-  content: "";
-  width: calc(100% - 100px);
-  height: calc(100% - 200px);
-  position: absolute;
-  left: 0;
-  bottom: 0px;
-  background: #f80;
-  z-index: -1;
 }
 #welcome .left img,
 #about .col:last-child img {
@@ -129,6 +115,8 @@ h3 {
 }
 #welcome .container .right {
   padding-top: 50px;
+  padding-right: 20px;
+  margin-left: 30px;
 }
 
 /* Skills(직무능력) */
@@ -139,15 +127,17 @@ h3 {
   background-image: url("http://placeimg.com/600/800/nature/grayscale");
   background-repeat: no-repeat;
   background-size: 50%;
-  background-position: right 150px;
+  background-position: right 100px;
 }
 #skills .container:last-child {
   display: flex;
 }
 #skills .container:last-child > div {
   flex: 1;
+  position: relative;
+  top: 150px;
   margin-top: 50px;
-  transform: translateY(0px);
+  transform: translate(0, 0);
 }
 #skills .col {
   background: rgba(255, 231, 204, 1);
@@ -159,12 +149,23 @@ h3 {
 }
 
 /* about */
+#about{position: relative;}
+#about:after{
+  content: '';
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 100%; height: 70%;
+  /* 배경색 Portfolio까지 이어짐 */
+  background: rgba(255, 231, 204, 1);
+  z-index: -1;
+}
 #about .container {
   position: relative;
   display: flex;
 }
-#about .col {
-  flex: 1;
+#about .col:last-child {
+  display: block;
+  box-shadow: 1em -1em 1px #f80;
 }
 #about .col:first-child {
   padding-right: 10em;
@@ -172,6 +173,8 @@ h3 {
 
 /* 포트폴리오 */
 #portfolio {
+  /* 배경색 about me 중간부터 이어짐 */
+  background: rgba(255, 231, 204, 1); 
   text-align: center;
 }
 #portfolio .container:first-child {
@@ -180,13 +183,22 @@ h3 {
 #portfolio ul {
   display: flex;
 }
-#portfolio ul li {
-  flex: 1;
+#portfolio ul li.col {
   margin-right: 20px;
 }
-#portfolio ul li:last-child {
+#portfolio ul li.col:last-child {
   margin-right: 0;
+}
+#portfolio ul li a {
+  display: block;
+  color: #666;
+}
+#portfolio ul li a h4{
+  font-weight: lighter;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 #portfolio ul li img {
   width: 100%;
+  display: block;
 }
