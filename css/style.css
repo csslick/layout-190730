@@ -96,7 +96,7 @@ h3 {
 
 #welcome {
   position: relative;
-  border: 2px solid green;
+/*   border: 2px solid green; */
   /* height: 500px; */
 }
 #welcome .container {
