@@ -191,6 +191,10 @@ h3 {
   width: 3em;
   margin-right: 3em;
 }
+#about a {
+  color: #666;
+  font-weight: lighter;
+}
 
 /* 포트폴리오 */
 #portfolio {
