@@ -191,7 +191,7 @@ h3 {
   width: 3em;
   margin-right: 3em;
 }
-#about a {
+#about .info a {
   color: #666;
   font-weight: lighter;
 }
