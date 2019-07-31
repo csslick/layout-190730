@@ -42,7 +42,9 @@ h3 {
 .cta:hover {
   opacity: 0.8;
 }
-.col{ flex: 1;}
+.col {
+  flex: 1;
+}
 .container {
   max-width: 1200px;
   min-width: 768px;
@@ -103,7 +105,9 @@ h3 {
 #welcome .container {
   display: flex;
 }
-#welcome .left{ margin-right: 30px;}
+#welcome .left {
+  margin-right: 30px;
+}
 #welcome .left,
 #about .col:last-child {
   position: relative;
@@ -131,6 +135,7 @@ h3 {
 }
 #skills .container:last-child {
   display: flex;
+  opacity: 0;
 }
 #skills .container:last-child > div {
   flex: 1;
@@ -149,12 +154,16 @@ h3 {
 }
 
 /* about */
-#about{position: relative;}
-#about:after{
-  content: '';
+#about {
+  position: relative;
+}
+#about:after {
+  content: "";
   position: absolute;
-  left: 0; bottom: 0;
-  width: 100%; height: 70%;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 63%;
   /* 배경색 Portfolio까지 이어짐 */
   background: rgba(255, 231, 204, 1);
   z-index: -1;
@@ -170,18 +179,32 @@ h3 {
 #about .col:first-child {
   padding-right: 10em;
 }
+#about p {
+  margin-bottom: 2em;
+}
+#about .info {
+  font-weight: lighter;
+  margin-bottom: 1em;
+}
+#about .info b {
+  display: inline-block;
+  width: 3em;
+  margin-right: 3em;
+}
 
 /* 포트폴리오 */
 #portfolio {
   /* 배경색 about me 중간부터 이어짐 */
-  background: rgba(255, 231, 204, 1); 
+  background: rgba(255, 231, 204, 1);
   text-align: center;
+  padding-bottom: 100px;
 }
 #portfolio .container:first-child {
   text-align: right;
 }
 #portfolio ul {
   display: flex;
+  margin-bottom: 1em;
 }
 #portfolio ul li.col {
   margin-right: 20px;
@@ -193,7 +216,7 @@ h3 {
   display: block;
   color: #666;
 }
-#portfolio ul li a h4{
+#portfolio ul li a h4 {
   font-weight: lighter;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
@@ -201,4 +224,44 @@ h3 {
 #portfolio ul li img {
   width: 100%;
   display: block;
+}
+
+/* 하단 비주얼 */
+#bottom-visual {
+  padding: 50px 0;
+  text-align: center;
+  height: 400px;
+  background-image: url("../images/bottom-visual.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  font-size: 2.4em;
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+/* IE 이면 배경 이미지 대체 처리 */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* IE10+ CSS styles go here */
+  #bottom-visual {
+    background-image: url("http://placeimg.com/1200/400/nature/grayscale");
+  }
+}
+
+/* 푸터 */
+#main-footer {
+  background: #fff;
+  text-align: center;
+  padding: 50px 0;
+  font-size: 16px;
+}
+#main-footer .sns li {
+  display: inline-block;
+}
+#main-footer .sns {
+  margin-bottom: 1em;
 }

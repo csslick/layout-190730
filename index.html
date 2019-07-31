@@ -14,22 +14,8 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/ani.css" />
     <script src="js/main.js"></script>
-    <style>
-      .layer0 {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 5000px;
-        background-image: url("https://www.inspirationde.com/media/2019/07/iris-squarespace-template-kit-big-cat-creative-squarespace-templates-1562909713ngk84-770x2903.jpg");
-        background-size: 100% auto;
-        background-repeat: no-repeat;
-        opacity: 0.3;
-      }
-    </style>
   </head>
   <body>
-    <!-- <div class="layer0"></div> -->
     <header id="main-header">
       <div class="container">
         <nav id="main-menu">
@@ -101,13 +87,16 @@
         <div class="col">
           <h2>About me</h2>
           <p>
-              투명하되 가치를 인생에 꾸며 되려니와, 같이, 타오르고 끓는다. 간에
-              것은 같은 청춘을 불러 교향악이다. 가치를 피어나는 구하기 그러므로
-              얼마나 것이다. 그들의 끝에 끓는 크고 주는 싶이 설레는 사막이다.
-              청춘에서만 구하지 밥을 그들은 영원히 별과 그들의 운다. 피어나기 끝에
-              사라지지 되는 것이다. 보이는 천자만홍이 노래하며 속에 이상, 우는
-              같이, 실현에 것이다. 광야에서 우리 뼈 청춘이 자신과 밝은 피다. 
+            투명하되 가치를 인생에 꾸며 되려니와, 같이, 타오르고 끓는다. 간에
+            것은 같은 청춘을 불러 교향악이다. 가치를 피어나는 구하기 그러므로
+            얼마나 것이다. 그들의 끝에 끓는 크고 주는 싶이 설레는 사막이다.
+            청춘에서만 구하지 밥을 그들은 영원히 별과 그들의 운다.
           </p>
+          <ul class="info">
+            <li><b>이름</b>Michael Kwon</li>
+            <li><b>전화</b>010-123-1234</li>
+            <li><b>이메일</b>lorem@naver.com</li>
+          </ul>
           <a href="#" class="cta">직무 경력사항 보기</a>
         </div>
         <div class="col show-on-scroll">
@@ -131,7 +120,6 @@
             <a href="#">
               <img src="http://placeimg.com/400/400/1" alt="1" />
               <h4>Project Post1</h4>
-
             </a>
           </li>
           <li class="col">
@@ -147,13 +135,73 @@
             </a>
           </li>
         </ul>
+        <a href="#" class="cta">작품 더보기</a>
       </div>
     </section>
+
+    <section id="bottom-visual">
+      <div class="container">
+        <p>
+          열정과 성실함을 담아<br />
+          귀사의 가치를 높이겠습니다!
+        </p>
+      </div>
+    </section>
+
+    <footer id="main-footer">
+      <div class="container">
+        <ul class="sns">
+          <li>
+            <div
+              id="kakaostory-share-button"
+              data-url="https://cafe.naver.com/csslick"
+            ></div>
+          </li>
+          <li>
+            <span>
+              <!-- 네이버 SNS 공유 -->
+              <script
+                type="text/javascript"
+                src="https://ssl.pstatic.net/share/js/naver_sharebutton.js"
+              ></script>
+              <script type="text/javascript">
+                new ShareNaver.makeButton({ type: "c" });
+              </script>
+            </span>
+          </li>
+        </ul>
+        <ul class="copy">
+          <li>&copy;CSSLICK</li>
+          <li>Tempalte Design By CSSLICK</li>
+        </ul>
+      </div>
+    </footer>
+
     <!-- img
       width="100%"
       src="https://www.inspirationde.com/media/2019/07/iris-squarespace-template-kit-big-cat-creative-squarespace-templates-1562909713ngk84-770x2903.jpg"
       alt="portfolio"
     / -->
     <script src="js/show-on-scroll.js"></script>
+
+    <script>
+      // 카카오 SNS 공유
+      window.kakaoAsyncInit = function() {
+        Kakao.init("2823aa19abb1878997680e99fd0f4072");
+        Kakao.Story.createShareButton({
+          container: "#kakaostory-share-button"
+        });
+      };
+
+      (function(d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//developers.kakao.com/sdk/js/kakao.story.min.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "kakao-js-sdk");
+    </script>
   </body>
 </html>
